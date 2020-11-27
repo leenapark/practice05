@@ -2,10 +2,18 @@ package com.javaex.ex09;
 
 public class StringUtil {
     
-    public static String concatString(){
-       
+    public static String concatString(String[] strArray){
+		
+    	
         //메소드 내용작성
-        
+    	String sum = "";
+    	
+    	for(int i=0; i<3; i++) {
+    		sum = sum+strArray[i];
+    	}
+    	
+    	return sum;
+    	
     }
 
 }
