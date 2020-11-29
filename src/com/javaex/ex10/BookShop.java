@@ -30,7 +30,6 @@ public class BookShop {
         // 코드작성
         if(num<=10||num>0) {
         	books[num].rent();
-        	books[num].rent();
         }
         
 
