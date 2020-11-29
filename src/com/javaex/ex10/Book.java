@@ -6,18 +6,19 @@ public class Book {
     private int bookNo;
     private String title;
     private String author;
-    private int stateCode;
+    public int stateCode;
     
     
     //생성자
-    
+
 	public Book(int bookNo, String title, String author) {
 		this.bookNo = bookNo;
 		this.title = title;
 		this.author = author;
 		stateCode = 1;
 	}
-	
+
+
 	
 	//메소드 getter/setter
 
@@ -37,26 +38,39 @@ public class Book {
 		this.title = title;
 	}
 
+	
 	public String getAuthor() {
 		return author;
 	}
 
+
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	
+
+
 	//rent()
-	public int rent(int num){
-		
-		return stateCode = 0;
+	public void rent(){
+		if(stateCode == 1) {
+			System.out.println(title + "이(가) 대여 되었습니다.");
+			stateCode--;
+		}
 	}
 	
-
+	public void print() {
+		if(stateCode == 1) {
+			System.out.println(bookNo + " 책 제목: " + title + ", 작가: " + author + " 대여 유무: 대여 가능");
+		}else if(stateCode == 0) {
+			System.out.println(bookNo + " 책 제목: " + title + ", 작가: " + author + " 대여 유무: 대여 중");
+		}
+	}
+	
+	/*
 	@Override
 	public String toString() {
 		return "Book [bookNo=" + bookNo + ", title=" + title + ", author=" + author + ", stateCode=" + stateCode + "]";
 	}
-    
+    */
     
     
     
